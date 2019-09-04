@@ -1,0 +1,19 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "grappy-amplified-dev-20190903210638-authRole",
+            "UnauthRoleArn": "arn:aws:iam::365850759904:role/grappy-amplified-dev-20190903210638-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::365850759904:role/grappy-amplified-dev-20190903210638-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "grappy-amplified-dev-20190903210638-deployment",
+            "UnauthRoleName": "grappy-amplified-dev-20190903210638-unauthRole",
+            "StackName": "grappy-amplified-dev-20190903210638",
+            "StackId": "arn:aws:cloudformation:us-east-1:365850759904:stack/grappy-amplified-dev-20190903210638/9f2dec40-ce60-11e9-bcd5-127e9735111e"
+        },
+        "categories": {
+            "auth": {
+                "cognito1d6f1997": {}
+            }
+        }
+    }
+}

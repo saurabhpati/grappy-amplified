@@ -1,6 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+import { Bot } from "./Bot";
 import './App.css';
+
+Amplify.configure(awsconfig);
+
+// Log chatbot response
 
 function App() {
   return (
@@ -18,6 +25,7 @@ function App() {
         >
           Learn React
         </a>
+        <Bot></Bot>
       </header>
     </div>
   );
