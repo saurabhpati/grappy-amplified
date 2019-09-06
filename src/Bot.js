@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Amplify, { Interactions } from 'aws-amplify';
+import React from 'react';
+import Amplify from 'aws-amplify';
 import { ChatBot, AmplifyTheme } from 'aws-amplify-react';
 import awsconfig from './aws-exports';
 
@@ -14,9 +14,9 @@ const myTheme = {
   }
 };
 
-export class Bot extends Component {
+export const Bot = () => {
 
-  handleComplete(err, confirmation) {
+  const handleComplete = (err, confirmation) => {
     if (err) {
       alert('Bot conversation failed')
       return;
@@ -26,32 +26,23 @@ export class Bot extends Component {
     return 'Trip booked. Thank you! what would you like to do next?';
   }
 
-  async componentDidMount() {
-    // const userInput = "I want to pick up some flowers";
-    // const response = await Interactions.send("OrderFlowers_dev", userInput);
-    // console.log('this is the response', response);
-  }
-// Provide a bot name and user input
-
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to ChatBot Demo</h1>
-        </header>
-        <ChatBot
-          userInput="I want to pick up some flowers"
-          title="My Bot"
-          theme={myTheme}
-          botName="OrderFlowers_dev"
-          welcomeMessage="Welcome, how can I help you today?"
-          onComplete={this.handleComplete.bind(this)}
-          clearOnComplete={true}
-          voiceEnabled={true}
-          textEnabled={true}
-          conversationModeOn={true}
-        />
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1 className="App-title">Welcome to ChatBot Demo</h1>
+      </header>
+      <ChatBot
+        userInput="I want to pick up some flowers"
+        title="My Bot"
+        theme={myTheme}
+        botName="OrderFlowers_dev"
+        welcomeMessage="Welcome, how can I help you today?"
+        onComplete={handleComplete}
+        clearOnComplete={true}
+        voiceEnabled={true}
+        textEnabled={true}
+        conversationModeOn={true}
+      />
+    </div>
+  );
 }
