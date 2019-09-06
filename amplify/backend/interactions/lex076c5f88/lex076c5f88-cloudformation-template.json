@@ -79,7 +79,7 @@
 				"Timeout": "300",
 				"Code": {
 					"S3Bucket": "grappy-amplified-dev-20190903210638-deployment",
-					"S3Key": "amplify-builds/lex076c5f88-5639586b7844506c586c-build.zip"
+					"S3Key": "amplify-builds/lex076c5f88-6a343053515337544d6a-build.zip"
 				}
 			}
 		},
