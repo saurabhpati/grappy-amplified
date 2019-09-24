@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+div.amplify-section-body > div >div:nth-child(2n+1) {
+  color: red;
+}
+
+col:nth-child(2n+3) {background: #CCC}
